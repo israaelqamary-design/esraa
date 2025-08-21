@@ -63,6 +63,18 @@ body {
     box-shadow: 0px 2px 6px goldenrod;
     z-index: 100;
 }
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;  /* عشان اللاب يكون شكله مظبوط */
+  width: 100%;        /* الموبايل ياخد العرض كله */
+  margin: 0 auto;     /* يخلي المحتوى في النص */
+  padding: 0 15px;    /* padding صغير من الجوانب */
+}
 
 /* تعديل خاص للموبايل */
 @media (max-width: 768px) {
@@ -70,6 +82,39 @@ body {
     padding: 10px 15px;   /* مسافة صغيرة للموبايل */
   }
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;   /* مبدئياً أقل من 200px */
+  background: black;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 2px 6px goldenrod;
+  z-index: 100;
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;   /* اللوجو فوق و اللينكات تحت */
+    padding: 10px 20px;       /* أقل بكتير من اللاب */
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 10px;
+  }
+}
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100vw;   /* ياخد العرض الكامل للشاشة */
+}
+
 
         .h{
             box-shadow: 0px 2px 6px goldenrod;
