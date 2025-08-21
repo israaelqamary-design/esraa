@@ -27,24 +27,50 @@
   }
 }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: rgb(46, 41, 32);
-        }
+        
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: rgb(46, 41, 32);
+}
+
+.container {
+  max-width: 1200px;   /* ثابت على الشاشات الكبيرة */
+  margin: 0 auto;      /* يخلي الصفحة في النص */
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;   /* تخليها تاخد عرض الموبايل كله */
+    padding: 10px;     /* تقلل الهوامش عشان المحتوى يبان كويس */
+  }
+}
 
         /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 60px;
-            background: black;
-            position: sticky;
-            top: 0;
-            box-shadow: 0px 2px 6px goldenrod;
-            z-index: 100;
-        }
+      header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;  /* أصغر من 200px */
+    background: black;
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 2px 6px goldenrod;
+    z-index: 100;
+}
+
+/* تعديل خاص للموبايل */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;   /* مسافة صغيرة للموبايل */
+  }
+}
+
         .h{
             box-shadow: 0px 2px 6px goldenrod;
         }
@@ -316,7 +342,7 @@ body {
 
 .gallery img {
   width: 100%;          /* الصورة تاخد عرض العمود بالكامل */
-  height: 350px;        /* ارتفاع موحد لكل الصور */
+  height: 70%;        /* ارتفاع موحد لكل الصور */
   object-fit: contain;    /* يظبط الصورة من غير ما تتشوه */
   border-radius: 6px;
 }
