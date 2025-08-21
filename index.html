@@ -52,17 +52,8 @@ body {
 }
 
         /* Header */
-      header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;  /* أصغر من 200px */
-    background: black;
-    position: sticky;
-    top: 0;
-    box-shadow: 0px 2px 6px goldenrod;
-    z-index: 100;
-}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -82,30 +73,36 @@ body {
     padding: 10px 15px;   /* مسافة صغيرة للموبايل */
   }
 }
+
+
+  header nav {
+    margin-top: 10px;
+  }
 header {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* يخلي اللوجو شمال واللينكات يمين */
   align-items: center;
-  padding: 15px 50px;   /* مبدئياً أقل من 200px */
+  padding: 15px 20px;             /* padding صغير عشان مايزقش المحتوى */
   background: black;
   position: sticky;
   top: 0;
   box-shadow: 0px 2px 6px goldenrod;
   z-index: 100;
 }
-
-/* للموبايل */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;   /* اللوجو فوق و اللينكات تحت */
-    padding: 10px 20px;       /* أقل بكتير من اللاب */
-    text-align: center;
+    flex-direction: column;     /* اللينكات تنزل تحت اللوجو */
+    align-items: center;
+    padding: 10px;
   }
 
-  header nav {
-    margin-top: 10px;
+  nav ul {
+    flex-direction: column;     /* اللينكات تبقى تحت بعض */
+    gap: 10px;
   }
 }
+
 body, html {
   margin: 0;
   padding: 0;
@@ -429,11 +426,8 @@ body {
   });
 </script>
 
-  <script type="text/javascript">
-m= prompt  (" Your Name")
-alert (m+"WELLCOME")
-</script>
-<marquee behavior="alternate" scrollamount="12" ondblclick="m()"> double click</marquee>
+  
+
     <!-- Header -->
     <header>
         <div class="logo"><span>TV</span>Shows</div>
